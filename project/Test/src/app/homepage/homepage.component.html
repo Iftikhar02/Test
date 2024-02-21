@@ -1,0 +1,17 @@
+<form [formGroup]="form" (ngSubmit)="onSave()">
+    <div>
+      <label for="country">Country:</label>
+      <input type="text" id="country" formControlName="country">
+    </div>
+    <div>
+      <label for="city">City:</label>
+      <select id="city" formControlName="city">
+        <option value="">Select an option</option>
+        <option value="Lahore">Lahore</option>
+        <option value="Karachi">Karachi</option>
+        <option value="Islamabad">Islamabad</option>
+      </select>
+    </div>
+    <button type="submit" [disabled]="form.invalid">Save</button>
+  </form>
+  
