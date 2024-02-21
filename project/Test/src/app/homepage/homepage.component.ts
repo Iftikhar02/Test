@@ -19,18 +19,8 @@ export class HomepageComponent {
     if (this.form && this.form.get('country') && this.form.get('city')) {
       const country = this.form.get('country')!.value;
       const city = this.form.get('city')!.value;
+      window.prompt(`Selected Country: ${country}, Selected City: ${city}`, 'Check values:');
       
-      const confirmation = `Selected Country: ${country}, Selected City: ${city}`;
-      
-      const userConfirmation = window.prompt(confirmation, 'Please confirm:');
-      
-      if (userConfirmation) {
-        console.log('Save confirmed by user');
-      } else {
-        console.log('Save cancelled by user');
-      }
-    } else {
-      console.log('Error: Form, country, or city is null');
     }
   }
   }
